@@ -17,5 +17,10 @@ describe('angularjs homepage', function() {
     var b =await element(by.css('div.text-block>div.text-headline')).getText();
     expect(b).toEqual('DEVELOP ACROSS ALL PLATFORMS');
     console.log(b);
+
+    for(i=0;i<=3;i++){
+      var online=await element.all(by.css(' table > tbody > tr > td:nth-child(2)')).get(i).getText();            
+     expect(online).toEqual('Online');
+  }
     })
 })
